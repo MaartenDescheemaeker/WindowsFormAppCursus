@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace WinFormAppCursus
 {
-    public partial class Form1 : Form
+    public partial class frmHoofd : Form
     {
-        public Form1()
+        public frmHoofd()
         {
             InitializeComponent();
+        }
+        frmSubVenster frmVenster1 = new frmSubVenster();
+        private void btnToonVenster_Click(object sender, EventArgs e)
+        {
+            frmVenster1.Show();
         }
     }
 }
