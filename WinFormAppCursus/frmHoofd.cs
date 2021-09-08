@@ -21,5 +21,10 @@ namespace WinFormAppCursus
         {
             frmVenster1.Show();
         }
+
+        private void frmHoofd_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.BackColor = Color.Red;
+        }
     }
 }
