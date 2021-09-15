@@ -26,5 +26,10 @@ namespace WinFormAppCursus
         {
             this.BackColor = Color.Red;
         }
+
+        private void frmHoofd_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

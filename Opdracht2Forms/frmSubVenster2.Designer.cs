@@ -1,7 +1,7 @@
 ﻿
-namespace WinFormAppCursus
+namespace Opdracht2Forms
 {
-    partial class frmHoofd
+    partial class frmSubVenster2
     {
         /// <summary>
         /// Required designer variable.
@@ -29,38 +29,33 @@ namespace WinFormAppCursus
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnToonVenster = new System.Windows.Forms.Button();
+            this.Onzichtbaar2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnToonVenster
+            // Onzichtbaar2
             // 
-            this.btnToonVenster.Location = new System.Drawing.Point(222, 168);
-            this.btnToonVenster.Name = "btnToonVenster";
-            this.btnToonVenster.Size = new System.Drawing.Size(75, 23);
-            this.btnToonVenster.TabIndex = 0;
-            this.btnToonVenster.Text = "Toon venster";
-            this.btnToonVenster.UseVisualStyleBackColor = true;
-            this.btnToonVenster.Click += new System.EventHandler(this.btnToonVenster_Click);
+            this.Onzichtbaar2.Location = new System.Drawing.Point(242, 109);
+            this.Onzichtbaar2.Name = "Onzichtbaar2";
+            this.Onzichtbaar2.Size = new System.Drawing.Size(311, 23);
+            this.Onzichtbaar2.TabIndex = 0;
+            this.Onzichtbaar2.Text = "Onzichtbaar maken";
+            this.Onzichtbaar2.UseVisualStyleBackColor = true;
+            this.Onzichtbaar2.Click += new System.EventHandler(this.Onzichtbaar2_Click);
             // 
-            // frmHoofd
+            // frmSubVenster2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnToonVenster);
-            this.Name = "frmHoofd";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.frmHoofd_Load);
-            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.frmHoofd_MouseClick);
+            this.Controls.Add(this.Onzichtbaar2);
+            this.Name = "frmSubVenster2";
+            this.Text = "frmSubVenster2";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnToonVenster;
+        private System.Windows.Forms.Button Onzichtbaar2;
     }
 }
-
