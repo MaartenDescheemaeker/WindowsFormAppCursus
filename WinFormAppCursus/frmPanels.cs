@@ -33,6 +33,8 @@ namespace WinFormAppCursus
             Button btn = sender as Button;
             Panel pnl = (Panel)btn.Parent;
             pnl.BackColor = Color.FromName(btn.Tag.ToString());
+            pnlTop.Enabled = !pnlTop.Enabled;
+            pnlLeft.Visible = !pnlLeft.Visible;
         }
     }
 }
