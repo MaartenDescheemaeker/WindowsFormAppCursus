@@ -52,6 +52,12 @@
     <Compile Include="frmHoofd.Designer.cs">
       <DependentUpon>frmHoofd.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPanels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPanels.Designer.cs">
+      <DependentUpon>frmPanels.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSubVenster.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmHoofd.resx">
       <DependentUpon>frmHoofd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPanels.resx">
+      <DependentUpon>frmPanels.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSubVenster.resx">
       <DependentUpon>frmSubVenster.cs</DependentUpon>
