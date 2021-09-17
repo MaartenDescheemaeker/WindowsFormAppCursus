@@ -45,11 +45,13 @@ namespace WinFormAppCursus
             // 
             // pnlTop
             // 
+            this.pnlTop.AutoScroll = true;
+            this.pnlTop.AutoScrollMargin = new System.Drawing.Size(300, 0);
             this.pnlTop.Controls.Add(this.btnGrey);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(902, 124);
+            this.pnlTop.Size = new System.Drawing.Size(900, 124);
             this.pnlTop.TabIndex = 2;
             this.pnlTop.Click += new System.EventHandler(this.pnlTop_Click);
             // 
@@ -59,31 +61,30 @@ namespace WinFormAppCursus
             this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlLeft.Location = new System.Drawing.Point(0, 124);
             this.pnlLeft.Name = "pnlLeft";
-            this.pnlLeft.Size = new System.Drawing.Size(236, 421);
+            this.pnlLeft.Size = new System.Drawing.Size(236, 420);
             this.pnlLeft.TabIndex = 1;
             // 
             // plnRight
             // 
             this.plnRight.Controls.Add(this.btnBlue);
             this.plnRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.plnRight.Location = new System.Drawing.Point(671, 124);
+            this.plnRight.Location = new System.Drawing.Point(669, 124);
             this.plnRight.Name = "plnRight";
-            this.plnRight.Size = new System.Drawing.Size(231, 421);
+            this.plnRight.Size = new System.Drawing.Size(231, 420);
             this.plnRight.TabIndex = 3;
             this.plnRight.Paint += new System.Windows.Forms.PaintEventHandler(this.plnRight_Paint);
             // 
             // btnRed
             // 
-            this.btnRed.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRed.Location = new System.Drawing.Point(71, 58);
             this.btnRed.MinimumSize = new System.Drawing.Size(20, 20);
             this.btnRed.Name = "btnRed";
             this.btnRed.Size = new System.Drawing.Size(75, 23);
             this.btnRed.TabIndex = 2;
+            this.btnRed.Tag = "Red";
             this.btnRed.Text = "Rood";
             this.btnRed.UseVisualStyleBackColor = true;
+            this.btnRed.Click += new System.EventHandler(this.btn_Click);
             // 
             // pnlFill
             // 
@@ -91,7 +92,7 @@ namespace WinFormAppCursus
             this.pnlFill.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlFill.Location = new System.Drawing.Point(236, 124);
             this.pnlFill.Name = "pnlFill";
-            this.pnlFill.Size = new System.Drawing.Size(435, 421);
+            this.pnlFill.Size = new System.Drawing.Size(433, 420);
             this.pnlFill.TabIndex = 0;
             // 
             // btnWhite
@@ -102,10 +103,12 @@ namespace WinFormAppCursus
             this.btnWhite.Location = new System.Drawing.Point(175, 58);
             this.btnWhite.MinimumSize = new System.Drawing.Size(20, 20);
             this.btnWhite.Name = "btnWhite";
-            this.btnWhite.Size = new System.Drawing.Size(75, 23);
+            this.btnWhite.Size = new System.Drawing.Size(73, 22);
             this.btnWhite.TabIndex = 0;
+            this.btnWhite.Tag = "White";
             this.btnWhite.Text = "Wit";
             this.btnWhite.UseVisualStyleBackColor = true;
+            this.btnWhite.Click += new System.EventHandler(this.btn_Click);
             // 
             // btnBlue
             // 
@@ -115,10 +118,12 @@ namespace WinFormAppCursus
             this.btnBlue.Location = new System.Drawing.Point(73, 58);
             this.btnBlue.MinimumSize = new System.Drawing.Size(20, 20);
             this.btnBlue.Name = "btnBlue";
-            this.btnBlue.Size = new System.Drawing.Size(75, 23);
+            this.btnBlue.Size = new System.Drawing.Size(75, 22);
             this.btnBlue.TabIndex = 1;
+            this.btnBlue.Tag = "Blue";
             this.btnBlue.Text = "Blauw";
             this.btnBlue.UseVisualStyleBackColor = true;
+            this.btnBlue.Click += new System.EventHandler(this.btn_Click);
             // 
             // btnGrey
             // 
@@ -126,14 +131,16 @@ namespace WinFormAppCursus
             this.btnGrey.Name = "btnGrey";
             this.btnGrey.Size = new System.Drawing.Size(75, 23);
             this.btnGrey.TabIndex = 0;
+            this.btnGrey.Tag = "Grey";
             this.btnGrey.Text = "Grijs";
             this.btnGrey.UseVisualStyleBackColor = true;
+            this.btnGrey.Click += new System.EventHandler(this.btn_Click);
             // 
             // frmPanels
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(902, 545);
+            this.ClientSize = new System.Drawing.Size(900, 544);
             this.Controls.Add(this.pnlFill);
             this.Controls.Add(this.plnRight);
             this.Controls.Add(this.pnlLeft);

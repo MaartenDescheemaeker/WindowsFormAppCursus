@@ -27,5 +27,12 @@ namespace WinFormAppCursus
             foreach (Control ctr in pnlTop.Controls)
                 ctr.ForeColor = Color.Green;
         }
+
+        private void btn_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            Panel pnl = (Panel)btn.Parent;
+            pnl.BackColor = Color.FromName(btn.Tag.ToString());
+        }
     }
 }
