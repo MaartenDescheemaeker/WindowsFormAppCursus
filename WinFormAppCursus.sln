@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormAppCursus", "WinForm
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opdracht2Forms", "Opdracht2Forms\Opdracht2Forms.csproj", "{81B739F2-58A3-4735-A3BD-3DD54239F289}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tekst-Controls", "Tekst-Controls\Tekst-Controls.csproj", "{FBF92ECE-89D8-4026-A857-F8CCED9D4DB1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{81B739F2-58A3-4735-A3BD-3DD54239F289}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81B739F2-58A3-4735-A3BD-3DD54239F289}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81B739F2-58A3-4735-A3BD-3DD54239F289}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBF92ECE-89D8-4026-A857-F8CCED9D4DB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBF92ECE-89D8-4026-A857-F8CCED9D4DB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBF92ECE-89D8-4026-A857-F8CCED9D4DB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBF92ECE-89D8-4026-A857-F8CCED9D4DB1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
