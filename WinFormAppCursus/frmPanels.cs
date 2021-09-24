@@ -36,5 +36,10 @@ namespace WinFormAppCursus
             pnlTop.Enabled = !pnlTop.Enabled;
             pnlLeft.Visible = !pnlLeft.Visible;
         }
+
+        private void btnWhite_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -65,7 +65,7 @@ namespace WinFormAppCursus
             this.btnGrey.Size = new System.Drawing.Size(75, 23);
             this.btnGrey.TabIndex = 0;
             this.btnGrey.Tag = "Grey";
-            this.btnGrey.Text = "Grijs";
+            this.btnGrey.Text = "&Grijs";
             this.btnGrey.UseVisualStyleBackColor = true;
             this.btnGrey.Click += new System.EventHandler(this.btn_Click);
             // 
@@ -95,10 +95,10 @@ namespace WinFormAppCursus
             this.btnBlue.Location = new System.Drawing.Point(73, 58);
             this.btnBlue.MinimumSize = new System.Drawing.Size(20, 20);
             this.btnBlue.Name = "btnBlue";
-            this.btnBlue.Size = new System.Drawing.Size(75, 20);
+            this.btnBlue.Size = new System.Drawing.Size(75, 23);
             this.btnBlue.TabIndex = 1;
             this.btnBlue.Tag = "Blue";
-            this.btnBlue.Text = "Blauw";
+            this.btnBlue.Text = "&Blauw";
             this.btnBlue.UseVisualStyleBackColor = true;
             // 
             // pnlLeft
@@ -118,7 +118,7 @@ namespace WinFormAppCursus
             this.btnRed.Size = new System.Drawing.Size(75, 23);
             this.btnRed.TabIndex = 2;
             this.btnRed.Tag = "Red";
-            this.btnRed.Text = "Rood";
+            this.btnRed.Text = "&Rood";
             this.btnRed.UseVisualStyleBackColor = true;
             // 
             // pnlFill
@@ -141,8 +141,9 @@ namespace WinFormAppCursus
             this.btnWhite.Size = new System.Drawing.Size(194, 23);
             this.btnWhite.TabIndex = 0;
             this.btnWhite.Tag = "White";
-            this.btnWhite.Text = "Wit";
+            this.btnWhite.Text = "&Wit";
             this.btnWhite.UseVisualStyleBackColor = true;
+            this.btnWhite.Click += new System.EventHandler(this.btnWhite_Click);
             // 
             // splLeft
             // 

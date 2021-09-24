@@ -29,26 +29,26 @@ namespace Tekst_Controls
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblfiguur = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // lblfiguur
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Webdings", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label1.Location = new System.Drawing.Point(416, 150);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 65);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "h";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lblfiguur.AutoSize = true;
+            this.lblfiguur.Font = new System.Drawing.Font("Webdings", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.lblfiguur.Location = new System.Drawing.Point(500, 150);
+            this.lblfiguur.Name = "lblfiguur";
+            this.lblfiguur.Size = new System.Drawing.Size(92, 65);
+            this.lblfiguur.TabIndex = 0;
+            this.lblfiguur.Text = "h";
+            this.lblfiguur.Click += new System.EventHandler(this.label1_Click);
             // 
             // frmOpdrachtLabels
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblfiguur);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmOpdrachtLabels";
             this.Text = "Label beweegt met pijltjestoetsen";
@@ -61,6 +61,6 @@ namespace Tekst_Controls
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblfiguur;
     }
 }

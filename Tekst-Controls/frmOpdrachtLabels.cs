@@ -32,7 +32,21 @@ namespace Tekst_Controls
             switch(e.KeyCode)
             {
                 case Keys.Right:
-                    this.label1 = 
+                    if(lblfiguur.Right < ClientSize.Width)
+                    lblfiguur.Left+=10;
+                    break;
+                case Keys.Left:
+                    if (lblfiguur.Left > 10)
+                        lblfiguur.Left -= 10;
+                    break;
+                case Keys.Up:
+                    if (lblfiguur.Top > 0)
+                        lblfiguur.Top -= 10;
+                    break;
+                case Keys.Down:
+                    if (lblfiguur.Bottom < ClientSize.Height)
+                        lblfiguur.Top += 10;
+                   
                     break;
             }
         }
