@@ -52,6 +52,12 @@
     <Compile Include="BtnToon.Designer.cs">
       <DependentUpon>BtnToon.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCheckButtons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheckButtons.Designer.cs">
+      <DependentUpon>frmCheckButtons.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHoofd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,12 @@
     </Compile>
     <Compile Include="frmPanels.Designer.cs">
       <DependentUpon>frmPanels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRadioButtons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRadioButtons.Designer.cs">
+      <DependentUpon>frmRadioButtons.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSubVenster.cs">
       <SubType>Form</SubType>
@@ -81,11 +93,17 @@
     <EmbeddedResource Include="BtnToon.resx">
       <DependentUpon>BtnToon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCheckButtons.resx">
+      <DependentUpon>frmCheckButtons.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmHoofd.resx">
       <DependentUpon>frmHoofd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPanels.resx">
       <DependentUpon>frmPanels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRadioButtons.resx">
+      <DependentUpon>frmRadioButtons.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSubVenster.resx">
       <DependentUpon>frmSubVenster.cs</DependentUpon>
