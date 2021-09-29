@@ -30,13 +30,21 @@ namespace OpdrTextBoxen
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnLogIn = new System.Windows.Forms.Button();
             this.btnAnnuleer = new System.Windows.Forms.Button();
+            this.btnLogIn = new System.Windows.Forms.Button();
+            this.txtGebruikersnaam = new System.Windows.Forms.TextBox();
+            this.txtPaswoord = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.txtPaswoord);
+            this.panel1.Controls.Add(this.txtGebruikersnaam);
             this.panel1.Controls.Add(this.btnAnnuleer);
             this.panel1.Controls.Add(this.btnLogIn);
             this.panel1.Location = new System.Drawing.Point(235, 122);
@@ -44,24 +52,60 @@ namespace OpdrTextBoxen
             this.panel1.Size = new System.Drawing.Size(316, 163);
             this.panel1.TabIndex = 0;
             // 
-            // btnLogIn
-            // 
-            this.btnLogIn.Location = new System.Drawing.Point(66, 75);
-            this.btnLogIn.Name = "btnLogIn";
-            this.btnLogIn.Size = new System.Drawing.Size(75, 23);
-            this.btnLogIn.TabIndex = 0;
-            this.btnLogIn.Text = "LOG IN";
-            this.btnLogIn.UseVisualStyleBackColor = true;
-            // 
             // btnAnnuleer
             // 
             this.btnAnnuleer.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnAnnuleer.Location = new System.Drawing.Point(226, 75);
+            this.btnAnnuleer.Location = new System.Drawing.Point(174, 100);
             this.btnAnnuleer.Name = "btnAnnuleer";
-            this.btnAnnuleer.Size = new System.Drawing.Size(75, 23);
+            this.btnAnnuleer.Size = new System.Drawing.Size(75, 26);
             this.btnAnnuleer.TabIndex = 1;
             this.btnAnnuleer.Text = "ANNULEER";
             this.btnAnnuleer.UseVisualStyleBackColor = true;
+            // 
+            // btnLogIn
+            // 
+            this.btnLogIn.Location = new System.Drawing.Point(105, 100);
+            this.btnLogIn.Name = "btnLogIn";
+            this.btnLogIn.Size = new System.Drawing.Size(63, 26);
+            this.btnLogIn.TabIndex = 0;
+            this.btnLogIn.Text = "LOG IN";
+            this.btnLogIn.UseVisualStyleBackColor = true;
+            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
+            // 
+            // txtGebruikersnaam
+            // 
+            this.txtGebruikersnaam.Location = new System.Drawing.Point(105, 32);
+            this.txtGebruikersnaam.Name = "txtGebruikersnaam";
+            this.txtGebruikersnaam.Size = new System.Drawing.Size(144, 20);
+            this.txtGebruikersnaam.TabIndex = 2;
+            this.txtGebruikersnaam.TextChanged += new System.EventHandler(this.txtGebruikersnaam_TextChanged);
+            // 
+            // txtPaswoord
+            // 
+            this.txtPaswoord.Location = new System.Drawing.Point(105, 74);
+            this.txtPaswoord.Name = "txtPaswoord";
+            this.txtPaswoord.Size = new System.Drawing.Size(144, 20);
+            this.txtPaswoord.TabIndex = 3;
+            this.txtPaswoord.Tag = "";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Gebruikersnaam:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 77);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Paswoord:";
             // 
             // Form1
             // 
@@ -77,6 +121,7 @@ namespace OpdrTextBoxen
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Geef je gegevens in!";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -86,6 +131,10 @@ namespace OpdrTextBoxen
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnAnnuleer;
         private System.Windows.Forms.Button btnLogIn;
+        private System.Windows.Forms.TextBox txtPaswoord;
+        private System.Windows.Forms.TextBox txtGebruikersnaam;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

@@ -16,5 +16,29 @@ namespace OpdrTextBoxen
         {
             InitializeComponent();
         }
+
+        private void btnLogIn_Click(object sender, EventArgs e)
+        {
+            if(txtGebruikersnaam.Text == "Administrator" && txtPaswoord.Text == "1234")
+            {
+                this.Text = txtGebruikersnaam.Text + " is ingelogd";
+                panel1.Visible=false;
+            }
+            if (txtGebruikersnaam.Text != null && txtPaswoord.Text == "5678")
+            {
+                this.Text = txtGebruikersnaam.Text + " is ingelogd";
+                panel1.Visible = false;
+            }
+        }
+
+        private void txtGebruikersnaam_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
