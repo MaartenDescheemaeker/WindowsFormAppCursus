@@ -30,12 +30,12 @@ namespace OpdrTextBoxen
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtPaswoord = new System.Windows.Forms.TextBox();
+            this.txtGebruikersnaam = new System.Windows.Forms.TextBox();
             this.btnAnnuleer = new System.Windows.Forms.Button();
             this.btnLogIn = new System.Windows.Forms.Button();
-            this.txtGebruikersnaam = new System.Windows.Forms.TextBox();
-            this.txtPaswoord = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,41 +52,14 @@ namespace OpdrTextBoxen
             this.panel1.Size = new System.Drawing.Size(316, 163);
             this.panel1.TabIndex = 0;
             // 
-            // btnAnnuleer
+            // label2
             // 
-            this.btnAnnuleer.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnAnnuleer.Location = new System.Drawing.Point(174, 100);
-            this.btnAnnuleer.Name = "btnAnnuleer";
-            this.btnAnnuleer.Size = new System.Drawing.Size(75, 26);
-            this.btnAnnuleer.TabIndex = 1;
-            this.btnAnnuleer.Text = "ANNULEER";
-            this.btnAnnuleer.UseVisualStyleBackColor = true;
-            // 
-            // btnLogIn
-            // 
-            this.btnLogIn.Location = new System.Drawing.Point(105, 100);
-            this.btnLogIn.Name = "btnLogIn";
-            this.btnLogIn.Size = new System.Drawing.Size(63, 26);
-            this.btnLogIn.TabIndex = 0;
-            this.btnLogIn.Text = "LOG IN";
-            this.btnLogIn.UseVisualStyleBackColor = true;
-            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
-            // 
-            // txtGebruikersnaam
-            // 
-            this.txtGebruikersnaam.Location = new System.Drawing.Point(105, 32);
-            this.txtGebruikersnaam.Name = "txtGebruikersnaam";
-            this.txtGebruikersnaam.Size = new System.Drawing.Size(144, 20);
-            this.txtGebruikersnaam.TabIndex = 2;
-            this.txtGebruikersnaam.TextChanged += new System.EventHandler(this.txtGebruikersnaam_TextChanged);
-            // 
-            // txtPaswoord
-            // 
-            this.txtPaswoord.Location = new System.Drawing.Point(105, 74);
-            this.txtPaswoord.Name = "txtPaswoord";
-            this.txtPaswoord.Size = new System.Drawing.Size(144, 20);
-            this.txtPaswoord.TabIndex = 3;
-            this.txtPaswoord.Tag = "";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 77);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Paswoord:";
             // 
             // label1
             // 
@@ -98,14 +71,43 @@ namespace OpdrTextBoxen
             this.label1.Text = "Gebruikersnaam:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label2
+            // txtPaswoord
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 77);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Paswoord:";
+            this.txtPaswoord.Location = new System.Drawing.Point(105, 74);
+            this.txtPaswoord.Name = "txtPaswoord";
+            this.txtPaswoord.PasswordChar = '*';
+            this.txtPaswoord.Size = new System.Drawing.Size(144, 20);
+            this.txtPaswoord.TabIndex = 3;
+            this.txtPaswoord.Tag = "";
+            // 
+            // txtGebruikersnaam
+            // 
+            this.txtGebruikersnaam.Location = new System.Drawing.Point(105, 32);
+            this.txtGebruikersnaam.Name = "txtGebruikersnaam";
+            this.txtGebruikersnaam.Size = new System.Drawing.Size(144, 20);
+            this.txtGebruikersnaam.TabIndex = 2;
+            this.txtGebruikersnaam.TextChanged += new System.EventHandler(this.txtGebruikersnaam_TextChanged);
+            // 
+            // btnAnnuleer
+            // 
+            this.btnAnnuleer.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnAnnuleer.Location = new System.Drawing.Point(174, 100);
+            this.btnAnnuleer.Name = "btnAnnuleer";
+            this.btnAnnuleer.Size = new System.Drawing.Size(75, 26);
+            this.btnAnnuleer.TabIndex = 1;
+            this.btnAnnuleer.Text = "ANNULEER";
+            this.btnAnnuleer.UseVisualStyleBackColor = true;
+            this.btnAnnuleer.Click += new System.EventHandler(this.btnAnnuleer_Click);
+            // 
+            // btnLogIn
+            // 
+            this.btnLogIn.Location = new System.Drawing.Point(105, 100);
+            this.btnLogIn.Name = "btnLogIn";
+            this.btnLogIn.Size = new System.Drawing.Size(63, 26);
+            this.btnLogIn.TabIndex = 0;
+            this.btnLogIn.Text = "LOG IN";
+            this.btnLogIn.UseVisualStyleBackColor = true;
+            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
             // 
             // Form1
             // 

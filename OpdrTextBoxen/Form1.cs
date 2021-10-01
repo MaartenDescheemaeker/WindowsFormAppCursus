@@ -24,7 +24,7 @@ namespace OpdrTextBoxen
                 this.Text = txtGebruikersnaam.Text + " is ingelogd";
                 panel1.Visible=false;
             }
-            if (txtGebruikersnaam.Text != null && txtPaswoord.Text == "5678")
+            if (txtGebruikersnaam.Text != "" && txtPaswoord.Text == "5678")
             {
                 this.Text = txtGebruikersnaam.Text + " is ingelogd";
                 panel1.Visible = false;
@@ -39,6 +39,10 @@ namespace OpdrTextBoxen
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+        private void btnAnnuleer_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
