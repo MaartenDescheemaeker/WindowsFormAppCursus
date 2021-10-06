@@ -52,6 +52,7 @@ namespace Tekst_Controls
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmOpdrachtLabels";
             this.Text = "Label beweegt met pijltjestoetsen";
+            this.Load += new System.EventHandler(this.frmOpdrachtLabels_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmOpdrachtLabels_KeyPress);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.frmOpdrachtLabels_KeyUp);
             this.ResumeLayout(false);

@@ -50,5 +50,10 @@ namespace Tekst_Controls
                     break;
             }
         }
+
+        private void frmOpdrachtLabels_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
