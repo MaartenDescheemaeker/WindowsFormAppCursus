@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpdrachtButtons", "Opdracht
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KOForms,Buttons, Labels, Textboxen", "KOForms,Buttons, Labels, Textboxen\KOForms,Buttons, Labels, Textboxen.csproj", "{59CE5A4D-129F-43F0-B82A-8192E4C782B7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpdrachtTimers", "..\..\..\..\..\..\Projects\OpdrachtTimers\OpdrachtTimers.csproj", "{4506B646-4F5F-4F71-807D-DF884EA8C3A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{59CE5A4D-129F-43F0-B82A-8192E4C782B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59CE5A4D-129F-43F0-B82A-8192E4C782B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59CE5A4D-129F-43F0-B82A-8192E4C782B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4506B646-4F5F-4F71-807D-DF884EA8C3A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4506B646-4F5F-4F71-807D-DF884EA8C3A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4506B646-4F5F-4F71-807D-DF884EA8C3A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4506B646-4F5F-4F71-807D-DF884EA8C3A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

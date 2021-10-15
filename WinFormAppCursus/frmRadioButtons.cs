@@ -36,5 +36,10 @@ namespace WinFormAppCursus
             if (rdbVoorZwart.Checked)
                 this.ForeColor = Color.Black;
         }
+
+        private void frmRadioButtons_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
