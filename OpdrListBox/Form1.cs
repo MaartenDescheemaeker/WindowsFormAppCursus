@@ -73,8 +73,9 @@ namespace OpdrListBox
             {
                 if(chkSelect.Checked)
                 {
-                    byte plaats = lest
+                    lstItems.Items.Insert(lstItems.SelectedIndex, invoer);
                 }
+                else
                 lstItems.Items.Add(invoer);
             }
         }
