@@ -88,6 +88,7 @@ namespace OpdrListBox
             this.btnWis.TabIndex = 4;
             this.btnWis.Text = "Selectie Wissen";
             this.btnWis.UseVisualStyleBackColor = true;
+            this.btnWis.Click += new System.EventHandler(this.btnWis_Click);
             // 
             // btnToevoegen
             // 
@@ -97,6 +98,7 @@ namespace OpdrListBox
             this.btnToevoegen.TabIndex = 5;
             this.btnToevoegen.Text = "Voeg Toe";
             this.btnToevoegen.UseVisualStyleBackColor = true;
+            this.btnToevoegen.Click += new System.EventHandler(this.btnToevoegen_Click);
             // 
             // chkSelect
             // 
@@ -122,6 +124,7 @@ namespace OpdrListBox
             this.Controls.Add(this.lstItems);
             this.Name = "frmListBox";
             this.Text = "ListBox Gebruiken";
+            this.Load += new System.EventHandler(this.frmListBox_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
