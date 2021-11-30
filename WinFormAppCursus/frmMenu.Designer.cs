@@ -30,15 +30,19 @@ namespace WinFormAppCursus
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.MenuLetter = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuFont = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuCourierNew = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuArial = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuVet = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuSchuin = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.txtVoorbeeld = new System.Windows.Forms.RichTextBox();
-            this.MenuLetter = new System.Windows.Forms.ToolStripMenuItem();
-            this.MenuFont = new System.Windows.Forms.ToolStripMenuItem();
-            this.MenuVet = new System.Windows.Forms.ToolStripMenuItem();
-            this.MenuSchuin = new System.Windows.Forms.ToolStripMenuItem();
-            this.MenuCourierNew = new System.Windows.Forms.ToolStripMenuItem();
-            this.MenuArial = new System.Windows.Forms.ToolStripMenuItem();
+            this.editerenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.knippenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kopiërenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.plakkenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -47,12 +51,62 @@ namespace WinFormAppCursus
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editerenToolStripMenuItem,
             this.MenuLetter});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // MenuLetter
+            // 
+            this.MenuLetter.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MenuFont,
+            this.MenuVet,
+            this.MenuSchuin});
+            this.MenuLetter.Name = "MenuLetter";
+            this.MenuLetter.Size = new System.Drawing.Size(72, 20);
+            this.MenuLetter.Text = "&Lettertype";
+            // 
+            // MenuFont
+            // 
+            this.MenuFont.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MenuCourierNew,
+            this.MenuArial});
+            this.MenuFont.Name = "MenuFont";
+            this.MenuFont.Size = new System.Drawing.Size(180, 22);
+            this.MenuFont.Text = "&Font";
+            this.MenuFont.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.MenuFont_DropDownItemClicked);
+            // 
+            // MenuCourierNew
+            // 
+            this.MenuCourierNew.Name = "MenuCourierNew";
+            this.MenuCourierNew.Size = new System.Drawing.Size(180, 22);
+            this.MenuCourierNew.Text = "Courier New";
+            // 
+            // MenuArial
+            // 
+            this.MenuArial.Name = "MenuArial";
+            this.MenuArial.Size = new System.Drawing.Size(180, 22);
+            this.MenuArial.Text = "Arial";
+            this.MenuArial.Click += new System.EventHandler(this.arialToolStripMenuItem_Click);
+            // 
+            // MenuVet
+            // 
+            this.MenuVet.Name = "MenuVet";
+            this.MenuVet.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
+            this.MenuVet.Size = new System.Drawing.Size(180, 22);
+            this.MenuVet.Text = "&Vetdruk";
+            this.MenuVet.Click += new System.EventHandler(this.MenuVet_Click);
+            // 
+            // MenuSchuin
+            // 
+            this.MenuSchuin.Name = "MenuSchuin";
+            this.MenuSchuin.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
+            this.MenuSchuin.Size = new System.Drawing.Size(180, 22);
+            this.MenuSchuin.Text = "&Schuindruk";
+            this.MenuSchuin.Click += new System.EventHandler(this.MenuSchuin_Click);
             // 
             // statusStrip1
             // 
@@ -85,51 +139,39 @@ namespace WinFormAppCursus
             this.txtVoorbeeld.TabIndex = 0;
             this.txtVoorbeeld.Text = "";
             // 
-            // MenuLetter
+            // editerenToolStripMenuItem
             // 
-            this.MenuLetter.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MenuFont,
-            this.MenuVet,
-            this.MenuSchuin});
-            this.MenuLetter.Name = "MenuLetter";
-            this.MenuLetter.Size = new System.Drawing.Size(72, 20);
-            this.MenuLetter.Text = "&Lettertype";
+            this.editerenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.knippenToolStripMenuItem,
+            this.kopiërenToolStripMenuItem,
+            this.plakkenToolStripMenuItem});
+            this.editerenToolStripMenuItem.Name = "editerenToolStripMenuItem";
+            this.editerenToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.editerenToolStripMenuItem.Text = "&Editeren";
             // 
-            // MenuFont
+            // knippenToolStripMenuItem
             // 
-            this.MenuFont.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MenuCourierNew,
-            this.MenuArial});
-            this.MenuFont.Name = "MenuFont";
-            this.MenuFont.Size = new System.Drawing.Size(180, 22);
-            this.MenuFont.Text = "&Font";
+            this.knippenToolStripMenuItem.Name = "knippenToolStripMenuItem";
+            this.knippenToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
+            this.knippenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.knippenToolStripMenuItem.Text = "Knippen";
+            this.knippenToolStripMenuItem.Click += new System.EventHandler(this.knippenToolStripMenuItem_Click);
             // 
-            // MenuVet
+            // kopiërenToolStripMenuItem
             // 
-            this.MenuVet.Name = "MenuVet";
-            this.MenuVet.Size = new System.Drawing.Size(180, 22);
-            this.MenuVet.Text = "&Vetdruk";
-            this.MenuVet.Click += new System.EventHandler(this.MenuVet_Click);
+            this.kopiërenToolStripMenuItem.Name = "kopiërenToolStripMenuItem";
+            this.kopiërenToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
+            this.kopiërenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.kopiërenToolStripMenuItem.Text = "Kopiëren";
+            this.kopiërenToolStripMenuItem.Click += new System.EventHandler(this.kopiërenToolStripMenuItem_Click);
             // 
-            // MenuSchuin
+            // plakkenToolStripMenuItem
             // 
-            this.MenuSchuin.Name = "MenuSchuin";
-            this.MenuSchuin.Size = new System.Drawing.Size(180, 22);
-            this.MenuSchuin.Text = "&Schuindruk";
-            this.MenuSchuin.Click += new System.EventHandler(this.MenuSchuin_Click);
-            // 
-            // MenuCourierNew
-            // 
-            this.MenuCourierNew.Name = "MenuCourierNew";
-            this.MenuCourierNew.Size = new System.Drawing.Size(180, 22);
-            this.MenuCourierNew.Text = "Courier New";
-            // 
-            // MenuArial
-            // 
-            this.MenuArial.Name = "MenuArial";
-            this.MenuArial.Size = new System.Drawing.Size(180, 22);
-            this.MenuArial.Text = "Arial";
-            this.MenuArial.Click += new System.EventHandler(this.arialToolStripMenuItem_Click);
+            this.plakkenToolStripMenuItem.Name = "plakkenToolStripMenuItem";
+            this.plakkenToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
+            this.plakkenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.plakkenToolStripMenuItem.Text = "Plakken";
+            this.plakkenToolStripMenuItem.Click += new System.EventHandler(this.plakkenToolStripMenuItem_Click);
             // 
             // frmMenu
             // 
@@ -142,6 +184,7 @@ namespace WinFormAppCursus
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMenu";
             this.Text = "VbOefMenu";
+            this.Load += new System.EventHandler(this.frmMenu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.toolStripContainer1.ContentPanel.ResumeLayout(false);
@@ -164,5 +207,9 @@ namespace WinFormAppCursus
         private System.Windows.Forms.ToolStripMenuItem MenuArial;
         private System.Windows.Forms.ToolStripMenuItem MenuVet;
         private System.Windows.Forms.ToolStripMenuItem MenuSchuin;
+        private System.Windows.Forms.ToolStripMenuItem editerenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem knippenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kopiërenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem plakkenToolStripMenuItem;
     }
 }
