@@ -30,6 +30,10 @@ namespace WinFormAppCursus
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.editerenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.knippenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kopiërenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.plakkenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuLetter = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuFont = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuCourierNew = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,13 +43,15 @@ namespace WinFormAppCursus
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.txtVoorbeeld = new System.Windows.Forms.RichTextBox();
-            this.editerenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.knippenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kopiërenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.plakkenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editeerBalk = new System.Windows.Forms.ToolStrip();
+            this.tsbtnPaste = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnCut = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnCopy = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
+            this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
+            this.editeerBalk.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -58,6 +64,40 @@ namespace WinFormAppCursus
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // editerenToolStripMenuItem
+            // 
+            this.editerenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.knippenToolStripMenuItem,
+            this.kopiërenToolStripMenuItem,
+            this.plakkenToolStripMenuItem});
+            this.editerenToolStripMenuItem.Name = "editerenToolStripMenuItem";
+            this.editerenToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.editerenToolStripMenuItem.Text = "&Editeren";
+            // 
+            // knippenToolStripMenuItem
+            // 
+            this.knippenToolStripMenuItem.Name = "knippenToolStripMenuItem";
+            this.knippenToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
+            this.knippenToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.knippenToolStripMenuItem.Text = "Knippen";
+            this.knippenToolStripMenuItem.Click += new System.EventHandler(this.knippenToolStripMenuItem_Click);
+            // 
+            // kopiërenToolStripMenuItem
+            // 
+            this.kopiërenToolStripMenuItem.Name = "kopiërenToolStripMenuItem";
+            this.kopiërenToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
+            this.kopiërenToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.kopiërenToolStripMenuItem.Text = "Kopiëren";
+            this.kopiërenToolStripMenuItem.Click += new System.EventHandler(this.kopiërenToolStripMenuItem_Click);
+            // 
+            // plakkenToolStripMenuItem
+            // 
+            this.plakkenToolStripMenuItem.Name = "plakkenToolStripMenuItem";
+            this.plakkenToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
+            this.plakkenToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.plakkenToolStripMenuItem.Text = "Plakken";
+            this.plakkenToolStripMenuItem.Click += new System.EventHandler(this.plakkenToolStripMenuItem_Click);
             // 
             // MenuLetter
             // 
@@ -75,20 +115,20 @@ namespace WinFormAppCursus
             this.MenuCourierNew,
             this.MenuArial});
             this.MenuFont.Name = "MenuFont";
-            this.MenuFont.Size = new System.Drawing.Size(180, 22);
+            this.MenuFont.Size = new System.Drawing.Size(171, 22);
             this.MenuFont.Text = "&Font";
             this.MenuFont.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.MenuFont_DropDownItemClicked);
             // 
             // MenuCourierNew
             // 
             this.MenuCourierNew.Name = "MenuCourierNew";
-            this.MenuCourierNew.Size = new System.Drawing.Size(180, 22);
+            this.MenuCourierNew.Size = new System.Drawing.Size(140, 22);
             this.MenuCourierNew.Text = "Courier New";
             // 
             // MenuArial
             // 
             this.MenuArial.Name = "MenuArial";
-            this.MenuArial.Size = new System.Drawing.Size(180, 22);
+            this.MenuArial.Size = new System.Drawing.Size(140, 22);
             this.MenuArial.Text = "Arial";
             this.MenuArial.Click += new System.EventHandler(this.arialToolStripMenuItem_Click);
             // 
@@ -96,7 +136,7 @@ namespace WinFormAppCursus
             // 
             this.MenuVet.Name = "MenuVet";
             this.MenuVet.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
-            this.MenuVet.Size = new System.Drawing.Size(180, 22);
+            this.MenuVet.Size = new System.Drawing.Size(171, 22);
             this.MenuVet.Text = "&Vetdruk";
             this.MenuVet.Click += new System.EventHandler(this.MenuVet_Click);
             // 
@@ -104,7 +144,7 @@ namespace WinFormAppCursus
             // 
             this.MenuSchuin.Name = "MenuSchuin";
             this.MenuSchuin.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
-            this.MenuSchuin.Size = new System.Drawing.Size(180, 22);
+            this.MenuSchuin.Size = new System.Drawing.Size(171, 22);
             this.MenuSchuin.Text = "&Schuindruk";
             this.MenuSchuin.Click += new System.EventHandler(this.MenuSchuin_Click);
             // 
@@ -130,6 +170,10 @@ namespace WinFormAppCursus
             this.toolStripContainer1.TabIndex = 2;
             this.toolStripContainer1.Text = "toolStripContainer1";
             // 
+            // toolStripContainer1.TopToolStripPanel
+            // 
+            this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.editeerBalk);
+            // 
             // txtVoorbeeld
             // 
             this.txtVoorbeeld.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -139,39 +183,47 @@ namespace WinFormAppCursus
             this.txtVoorbeeld.TabIndex = 0;
             this.txtVoorbeeld.Text = "";
             // 
-            // editerenToolStripMenuItem
+            // editeerBalk
             // 
-            this.editerenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.knippenToolStripMenuItem,
-            this.kopiërenToolStripMenuItem,
-            this.plakkenToolStripMenuItem});
-            this.editerenToolStripMenuItem.Name = "editerenToolStripMenuItem";
-            this.editerenToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
-            this.editerenToolStripMenuItem.Text = "&Editeren";
+            this.editeerBalk.Dock = System.Windows.Forms.DockStyle.None;
+            this.editeerBalk.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbtnPaste,
+            this.tsbtnCut,
+            this.tsbtnCopy});
+            this.editeerBalk.Location = new System.Drawing.Point(3, 0);
+            this.editeerBalk.Name = "editeerBalk";
+            this.editeerBalk.Size = new System.Drawing.Size(112, 25);
+            this.editeerBalk.TabIndex = 0;
             // 
-            // knippenToolStripMenuItem
+            // tsbtnPaste
             // 
-            this.knippenToolStripMenuItem.Name = "knippenToolStripMenuItem";
-            this.knippenToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.knippenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.knippenToolStripMenuItem.Text = "Knippen";
-            this.knippenToolStripMenuItem.Click += new System.EventHandler(this.knippenToolStripMenuItem_Click);
+            this.tsbtnPaste.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnPaste.Image = global::WinFormAppCursus.Properties.Resources.paste;
+            this.tsbtnPaste.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnPaste.Name = "tsbtnPaste";
+            this.tsbtnPaste.Size = new System.Drawing.Size(23, 22);
+            this.tsbtnPaste.Text = "Paste";
+            this.tsbtnPaste.Click += new System.EventHandler(this.plakkenToolStripMenuItem_Click);
             // 
-            // kopiërenToolStripMenuItem
+            // tsbtnCut
             // 
-            this.kopiërenToolStripMenuItem.Name = "kopiërenToolStripMenuItem";
-            this.kopiërenToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.kopiërenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.kopiërenToolStripMenuItem.Text = "Kopiëren";
-            this.kopiërenToolStripMenuItem.Click += new System.EventHandler(this.kopiërenToolStripMenuItem_Click);
+            this.tsbtnCut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnCut.Image = global::WinFormAppCursus.Properties.Resources.cut;
+            this.tsbtnCut.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnCut.Name = "tsbtnCut";
+            this.tsbtnCut.Size = new System.Drawing.Size(23, 22);
+            this.tsbtnCut.Text = "Cut";
+            this.tsbtnCut.Click += new System.EventHandler(this.knippenToolStripMenuItem_Click);
             // 
-            // plakkenToolStripMenuItem
+            // tsbtnCopy
             // 
-            this.plakkenToolStripMenuItem.Name = "plakkenToolStripMenuItem";
-            this.plakkenToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-            this.plakkenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.plakkenToolStripMenuItem.Text = "Plakken";
-            this.plakkenToolStripMenuItem.Click += new System.EventHandler(this.plakkenToolStripMenuItem_Click);
+            this.tsbtnCopy.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnCopy.Image = global::WinFormAppCursus.Properties.Resources.copy;
+            this.tsbtnCopy.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnCopy.Name = "tsbtnCopy";
+            this.tsbtnCopy.Size = new System.Drawing.Size(23, 22);
+            this.tsbtnCopy.Text = "Copy";
+            this.tsbtnCopy.Click += new System.EventHandler(this.kopiërenToolStripMenuItem_Click);
             // 
             // frmMenu
             // 
@@ -188,8 +240,12 @@ namespace WinFormAppCursus
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.toolStripContainer1.ContentPanel.ResumeLayout(false);
+            this.toolStripContainer1.TopToolStripPanel.ResumeLayout(false);
+            this.toolStripContainer1.TopToolStripPanel.PerformLayout();
             this.toolStripContainer1.ResumeLayout(false);
             this.toolStripContainer1.PerformLayout();
+            this.editeerBalk.ResumeLayout(false);
+            this.editeerBalk.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,5 +267,9 @@ namespace WinFormAppCursus
         private System.Windows.Forms.ToolStripMenuItem knippenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kopiërenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem plakkenToolStripMenuItem;
+        private System.Windows.Forms.ToolStrip editeerBalk;
+        private System.Windows.Forms.ToolStripButton tsbtnPaste;
+        private System.Windows.Forms.ToolStripButton tsbtnCut;
+        private System.Windows.Forms.ToolStripButton tsbtnCopy;
     }
 }
