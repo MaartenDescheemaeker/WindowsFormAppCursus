@@ -158,5 +158,8 @@
   <ItemGroup>
     <None Include="Resources\paste.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Font.SystemFontFamilies.bmp" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

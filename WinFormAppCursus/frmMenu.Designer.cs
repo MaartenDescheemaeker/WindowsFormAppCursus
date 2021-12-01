@@ -44,14 +44,23 @@ namespace WinFormAppCursus
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.txtVoorbeeld = new System.Windows.Forms.RichTextBox();
             this.editeerBalk = new System.Windows.Forms.ToolStrip();
+            this.LettertypeBalk = new System.Windows.Forms.ToolStrip();
+            this.tscmbFont = new System.Windows.Forms.ToolStripComboBox();
             this.tsbtnPaste = new System.Windows.Forms.ToolStripButton();
             this.tsbtnCut = new System.Windows.Forms.ToolStripButton();
             this.tsbtnCopy = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnItalic = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnBold = new System.Windows.Forms.ToolStripButton();
+            this.statusLettertype = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusSchuin = new System.Windows.Forms.ToolStripStatusLabel();
+            this.StatusVet = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
             this.editeerBalk.SuspendLayout();
+            this.LettertypeBalk.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -150,6 +159,10 @@ namespace WinFormAppCursus
             // 
             // statusStrip1
             // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.statusLettertype,
+            this.statusSchuin,
+            this.StatusVet});
             this.statusStrip1.Location = new System.Drawing.Point(0, 428);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(800, 22);
@@ -173,6 +186,7 @@ namespace WinFormAppCursus
             // toolStripContainer1.TopToolStripPanel
             // 
             this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.editeerBalk);
+            this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.LettertypeBalk);
             // 
             // txtVoorbeeld
             // 
@@ -192,8 +206,26 @@ namespace WinFormAppCursus
             this.tsbtnCopy});
             this.editeerBalk.Location = new System.Drawing.Point(3, 0);
             this.editeerBalk.Name = "editeerBalk";
-            this.editeerBalk.Size = new System.Drawing.Size(112, 25);
+            this.editeerBalk.Size = new System.Drawing.Size(81, 25);
             this.editeerBalk.TabIndex = 0;
+            // 
+            // LettertypeBalk
+            // 
+            this.LettertypeBalk.Dock = System.Windows.Forms.DockStyle.None;
+            this.LettertypeBalk.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbtnItalic,
+            this.tsbtnBold,
+            this.tscmbFont});
+            this.LettertypeBalk.Location = new System.Drawing.Point(96, 0);
+            this.LettertypeBalk.Name = "LettertypeBalk";
+            this.LettertypeBalk.Size = new System.Drawing.Size(181, 25);
+            this.LettertypeBalk.TabIndex = 1;
+            // 
+            // tscmbFont
+            // 
+            this.tscmbFont.Name = "tscmbFont";
+            this.tscmbFont.Size = new System.Drawing.Size(121, 25);
+            this.tscmbFont.SelectedIndexChanged += new System.EventHandler(this.tscmbFont_SelectedIndexChanged);
             // 
             // tsbtnPaste
             // 
@@ -225,6 +257,44 @@ namespace WinFormAppCursus
             this.tsbtnCopy.Text = "Copy";
             this.tsbtnCopy.Click += new System.EventHandler(this.kopiërenToolStripMenuItem_Click);
             // 
+            // tsbtnItalic
+            // 
+            this.tsbtnItalic.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnItalic.Image = global::WinFormAppCursus.Properties.Resources.italic;
+            this.tsbtnItalic.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnItalic.Name = "tsbtnItalic";
+            this.tsbtnItalic.Size = new System.Drawing.Size(23, 22);
+            this.tsbtnItalic.Text = "Italic";
+            this.tsbtnItalic.Click += new System.EventHandler(this.MenuSchuin_Click);
+            // 
+            // tsbtnBold
+            // 
+            this.tsbtnBold.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnBold.Image = global::WinFormAppCursus.Properties.Resources.bold;
+            this.tsbtnBold.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnBold.Name = "tsbtnBold";
+            this.tsbtnBold.Size = new System.Drawing.Size(23, 22);
+            this.tsbtnBold.Text = "Bold";
+            this.tsbtnBold.Click += new System.EventHandler(this.MenuVet_Click);
+            // 
+            // statusLettertype
+            // 
+            this.statusLettertype.Name = "statusLettertype";
+            this.statusLettertype.Size = new System.Drawing.Size(31, 17);
+            this.statusLettertype.Text = "Arial";
+            // 
+            // statusSchuin
+            // 
+            this.statusSchuin.Name = "statusSchuin";
+            this.statusSchuin.Size = new System.Drawing.Size(43, 17);
+            this.statusSchuin.Text = "Schuin";
+            // 
+            // StatusVet
+            // 
+            this.StatusVet.Name = "StatusVet";
+            this.StatusVet.Size = new System.Drawing.Size(23, 17);
+            this.StatusVet.Text = "Vet";
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -239,6 +309,8 @@ namespace WinFormAppCursus
             this.Load += new System.EventHandler(this.frmMenu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.toolStripContainer1.ContentPanel.ResumeLayout(false);
             this.toolStripContainer1.TopToolStripPanel.ResumeLayout(false);
             this.toolStripContainer1.TopToolStripPanel.PerformLayout();
@@ -246,6 +318,8 @@ namespace WinFormAppCursus
             this.toolStripContainer1.PerformLayout();
             this.editeerBalk.ResumeLayout(false);
             this.editeerBalk.PerformLayout();
+            this.LettertypeBalk.ResumeLayout(false);
+            this.LettertypeBalk.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,5 +345,12 @@ namespace WinFormAppCursus
         private System.Windows.Forms.ToolStripButton tsbtnPaste;
         private System.Windows.Forms.ToolStripButton tsbtnCut;
         private System.Windows.Forms.ToolStripButton tsbtnCopy;
+        private System.Windows.Forms.ToolStrip LettertypeBalk;
+        private System.Windows.Forms.ToolStripButton tsbtnItalic;
+        private System.Windows.Forms.ToolStripButton tsbtnBold;
+        private System.Windows.Forms.ToolStripComboBox tscmbFont;
+        private System.Windows.Forms.ToolStripStatusLabel statusLettertype;
+        private System.Windows.Forms.ToolStripStatusLabel statusSchuin;
+        private System.Windows.Forms.ToolStripStatusLabel StatusVet;
     }
 }

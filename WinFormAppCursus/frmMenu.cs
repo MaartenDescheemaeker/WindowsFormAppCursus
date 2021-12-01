@@ -29,11 +29,15 @@ namespace WinFormAppCursus
             {
                 style |= FontStyle.Bold;
                 MenuVet.Checked = true;
+                tsbtnBold.Checked = true;
+                StatusVet.Font = new Font(StatusVet.Font, FontStyle.Bold);
             }
             else
             {
                 style &= ~FontStyle.Bold;
                 MenuVet.Checked = false;
+                tsbtnBold.Checked = false;
+                StatusVet.Font = new Font(StatusVet.Font, FontStyle.Regular);
             }
             txtVoorbeeld.Font = new Font(txtVoorbeeld.Font, style);
         }
@@ -45,11 +49,15 @@ namespace WinFormAppCursus
             {
                 style |= FontStyle.Italic;
                 MenuSchuin.Checked = true;
+                tsbtnItalic.Checked = true;
+                statusSchuin.Font = new Font(statusSchuin.Font, FontStyle.Italic);
             }
             else
             {
                 style &= ~FontStyle.Italic;
                 MenuSchuin.Checked = false;
+                tsbtnItalic.Checked = false;
+                statusSchuin.Font = new Font(statusSchuin.Font, FontStyle.Regular);
             }
             txtVoorbeeld.Font = new Font(txtVoorbeeld.Font, style);
         }
@@ -62,6 +70,7 @@ namespace WinFormAppCursus
             txtVoorbeeld.Font = new Font(hetLettertype.Text, txtVoorbeeld.Font.Size);
             //oude stijl erbij instellen
             txtVoorbeeld.Font = new Font(txtVoorbeeld.Font, style);
+            statusLettertype.Text = txtVoorbeeld.Font.Name;
         }
 
         private void MenuFont_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -72,16 +81,18 @@ namespace WinFormAppCursus
                 huidig.Checked = false;
             }
             ((ToolStripMenuItem)e.ClickedItem).Checked = true;
+            tscmbFont.SelectedText = ((ToolStripMenuItem)e.ClickedItem).Text;
         }
 
         private void frmMenu_Load(object sender, EventArgs e)
         {
             //alle fonts toevoegen aan menu font en comboboxFont
             System.Drawing.Text.InstalledFontCollection fonts = new System.Drawing.Text.InstalledFontCollection();
-            int Arialindex = -1, count = -14;
+            int Arialindex = -1, count = -1;
             foreach (FontFamily family in fonts.Families)
             {
                 MenuFont.DropDown.Items.Add(family.Name);
+                tscmbFont.Items.Add(family.Name);
                 //index Arial onthouden
                 count++;
                 if (family.Name == "Arial")
@@ -89,6 +100,8 @@ namespace WinFormAppCursus
             }
             // lettertype op arial instellen
             txtVoorbeeld.Font = new Font("Arial", 12);
+            tscmbFont.SelectedIndex = Arialindex;
+            statusLettertype.Text = "Arial";
         }
 
         private void knippenToolStripMenuItem_Click(object sender, EventArgs e)
@@ -104,6 +117,16 @@ namespace WinFormAppCursus
         private void plakkenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             txtVoorbeeld.Paste();
+        }
+
+        private void tscmbFont_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach(ToolStripMenuItem huidig in MenuFont.DropDownItems)
+            {
+                huidig.Checked = false;
+            }
+            ((ToolStripMenuItem)MenuFont.DropDownItems[tscmbFont.SelectedIndex]).Checked = true;
+            Lettertype((ToolStripMenuItem)MenuFont.DropDownItems[tscmbFont.SelectedIndex]);
         }
     }
 }
